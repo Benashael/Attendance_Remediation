@@ -34,8 +34,8 @@ def load_csv(file, usecols=None, skiprows=None, header='infer', sep=","):
 # ---------------------------
 # File upload widgets
 # ---------------------------
-file_a = st.file_uploader("Upload File A (CSV)", type=["csv"])
-file_b = st.file_uploader("Upload File B (CSV)", type=["csv"])
+file_a = st.file_uploader("Upload File A - Participants History (CSV)", type=["csv"])
+file_b = st.file_uploader("Upload File B - Poll Report (CSV)", type=["csv"])
 
 in_person = st.number_input(
     "Enter In-Person Attendance Count",
@@ -174,3 +174,4 @@ if file_a and file_b and st.button("Generate Report"):
         file_name=file_name,
         mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
     )
+
